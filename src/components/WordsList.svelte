@@ -64,6 +64,7 @@
   });
 </script>
 
+<div class="table_scroll">
 <table>
   <tbody>
     <WordsListHeader
@@ -85,3 +86,4 @@
     {/each}
   </tbody>
 </table>
+</div>

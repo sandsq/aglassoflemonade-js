@@ -9,6 +9,7 @@
   );
 </script>
 
+<div class="table_scroll">
 <table>
   <tbody>
     {#each sortedThoughts as thought (thought.id)}
@@ -20,3 +21,4 @@
     {/each}
   </tbody>
 </table>
+</div>
