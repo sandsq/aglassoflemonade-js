@@ -36,9 +36,9 @@ jobs:
         run: npm run check
 
       - name: Build
-        # Served from https://<user>.github.io/<repo-name>/, so the app's
-        # base path needs to match the repo name.
-        run: npm run build -- --base=/${{ github.event.repository.name }}/
+        # Served from the custom domain's root (see public/CNAME), so the
+        # default base path of "/" is correct here.
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
