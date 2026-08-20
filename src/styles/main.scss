@@ -25,18 +25,20 @@ body {
 }
 
 .main_container {
-    width: 50%;
-    @media (max-width: 1000px) {
-        width: 75%;
-    }
-    @media (max-width: 600px) {
-        width: 92%;
-        margin-top: 1.5rem;
-    }
+    // A continuous width (rather than a handful of fixed percentages that
+    // switch at fixed pixel breakpoints) avoids a jump where narrowing the
+    // window by a single pixel past a breakpoint could suddenly make the
+    // container *wider* than it was just before.
+    width: 90%;
+    max-width: 760px;
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
     border: $test_border_size solid $fg_color;
+
+    @media (max-width: 600px) {
+        margin-top: 1.5rem;
+    }
 }
 
 .active_nav_page {
